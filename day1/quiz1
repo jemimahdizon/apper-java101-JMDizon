@@ -6,3 +6,9 @@
 6. Java Virtual Machine
 7. False
 8. JAVA_HOME
+9-10.
+class LastItem {
+    public static void main(String[] s) {
+        System.out.println("Jemimah Dizon");
+    }
+} 
