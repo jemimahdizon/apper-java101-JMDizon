@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class CategoryEnum {
+    
+    enum Category {
+        MEN,
+        WOMEN,
+        KID,
+        GRANDMA,
+        GRANDPA
+    }
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a value from Category (MEN, WOMEN, KID, GRANDMA, GRANDPA): ");
+        String categoryStr = input.nextLine().toUpperCase();
+        Category chosenCategory = Category.valueOf(categoryStr);
+        double price = 0.0;
+
+        switch (chosenCategory) {
+            case MEN: price = 13.57; break;
+            case WOMEN: price = 20.45; break;
+            case KID: price = 45.6; break;
+            case GRANDMA: price = 56.67; break;
+            case GRANDPA: price = 3.56; break;
+            default: System.out.println("Invalid Category"); break;
+        }
+
+        System.out.println("The price of " + chosenCategory + " category is Php" + price);
+        
+    }
+}
+
