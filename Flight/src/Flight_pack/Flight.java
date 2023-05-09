@@ -39,7 +39,7 @@ public class Flight {
 
     public void setNumberOfSeats(int seats) {
         if(seats <= this.seats) {
-            System.out.println("Cannot allow seat numbers to be less or equal than current capacity.");
+            System.out.println("Seat numbers is less than current capacity.");
         }
         else {
             this.seats = seats - passengers;
