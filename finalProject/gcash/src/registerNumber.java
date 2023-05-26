@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class registerNumber {
     public static void registerNumber(Scanner scanner, Map<String, Double> balances, Map<String, String> users) {
         System.out.print("Enter mobile number: ");
-        String mobileNumber = scanner.next();
+        String mobileNumber = scanner.nextLine().trim(); // Use nextLine() and trim()
 
         // Check if the mobile number is already registered
         if (users.containsKey(mobileNumber)) {
@@ -13,16 +13,16 @@ public class registerNumber {
         }
 
         // Check if the mobile number is empty or blank
-        if (mobileNumber.isEmpty() || mobileNumber.isBlank()) {
+        if (mobileNumber.isEmpty()) { // Only check for empty input
             System.out.println("Mobile number must not be empty!");
             return;
         }
 
         System.out.print("Enter name: ");
-        String name = scanner.next();
+        String name = scanner.nextLine().trim(); // Use nextLine() and trim()
 
         // Check if the name is empty or blank
-        if (name.isEmpty() || name.isBlank()) {
+        if (name.isEmpty()) { // Only check for empty input
             System.out.println("Name must not be empty!");
             return;
         }
